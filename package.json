@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-query",
   "version": "0.1.0",
-  "description": "Add \"rules\" made of arbitrary selectors to choose lines of context to be reported",
+  "description": "Add \"rules\" made of arbitrary selectors to choose source lines to be reported",
   "keywords": [
     "eslint",
     "eslintplugin",

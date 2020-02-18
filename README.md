@@ -15,7 +15,7 @@
 
 # eslint-plugin-query
 
-Add "rules" made of arbitrary selectors to choose lines of context to be reported
+Add "rules" made of arbitrary selectors to choose source lines to be reported
 
 ## Installation
 
@@ -80,3 +80,5 @@ module.exports = {
 
 1. Could give `fixable` option (to remove all identified nodes)
 1. Could make CLI to perform one-off searches easier than using `eslint --plugin query --rule 'query/query: 2'`
+1. Add an option to match (additionally) by regex.
+1. Get an AST parser for jsdoc comment blocks, e.g., to search for `@todo` comments
