@@ -60,3 +60,7 @@ module.exports = {
       May be negative as with `slice`.
     - `end` - An integer at which to end slicing out of the selected lines of code.
       May be negative as with `slice`.
+
+## To-dos
+
+1. Could give `fixable` option (to remove all identified nodes)
