@@ -15,7 +15,7 @@
   "bugs": "https://github.com/brettz9/eslint-plugin-query/issues",
   "scripts": {
     "eslint": "eslint --ext=js,md,html .",
-    "coverage-badge": "coveradge badges/coverage-badge",
+    "coverage-badge": "coveradge --color brightgreen badges/coverage-badge",
     "mocha": "_mocha --recursive --reporter-options configFile=mocha-multi-reporters.json tests",
     "test": "nyc --all npm run mocha && npm run coverage-badge"
   },
