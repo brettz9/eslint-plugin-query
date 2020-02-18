@@ -1,0 +1,50 @@
+{
+  "name": "eslint-plugin-query",
+  "version": "0.0.0",
+  "description": "Add \"rules\" made of arbitrary selectors to choose lines of context to be reported",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "Brett Zamir",
+  "contributors": [],
+  "main": "lib/index.js",
+  "repository": "https://github.com/brettz9/eslint-plugin-query",
+  "homepage": "https://github.com/brettz9/eslint-plugin-query",
+  "bugs": "https://github.com/brettz9/eslint-plugin-query/issues",
+  "scripts": {
+    "eslint": "eslint --ext=js,md,html .",
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "es6-template-strings": "^2.0.1",
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "@mysticatea/eslint-plugin": "^13.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-ash-nazg": "^17.2.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-array-func": "^3.1.3",
+    "eslint-plugin-compat": "^3.5.1",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsdoc": "^21.0.0",
+    "eslint-plugin-markdown": "^1.0.1",
+    "eslint-plugin-no-unsanitized": "^3.0.2",
+    "eslint-plugin-no-use-extend-native": "^0.4.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-unicorn": "^16.1.1",
+    "mocha": "^3.1.2",
+    "typescript": "^3.7.5"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "license": "ISC"
+}
