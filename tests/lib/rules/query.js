@@ -9,7 +9,9 @@
 // ------------------------------------------------------------------------------
 
 const {RuleTester} = require('eslint');
-const rule = require('../../../lib/rules/query');
+const rules = require('../../../lib/');
+
+const rule = rules.rules.query;
 
 // ------------------------------------------------------------------------------
 // Tests
@@ -51,6 +53,20 @@ ruleTester.run('query', rule, {
       ],
       errors: [{
         message: 'Oops, too long: `function a (b, c) {}`.',
+        type: 'FunctionDeclaration'
+      }]
+    },
+    {
+      code: 'function a (b, c) {}',
+      options: [
+        {
+          queries: {
+            'FunctionDeclaration[params.length>1]': {}
+          }
+        }
+      ],
+      errors: [{
+        message: 'function a (b, c) {}',
         type: 'FunctionDeclaration'
       }]
     }

@@ -15,14 +15,23 @@
   "bugs": "https://github.com/brettz9/eslint-plugin-query/issues",
   "scripts": {
     "eslint": "eslint --ext=js,md,html .",
-    "test": "mocha tests --recursive"
+    "coverage-badge": "coveradge badges/coverage-badge",
+    "mocha": "_mocha --recursive --reporter-options configFile=mocha-multi-reporters.json tests",
+    "test": "nyc --all npm run mocha && npm run coverage-badge"
+  },
+  "nyc": {
+    "reporter": [
+      "json-summary",
+      "text"
+    ]
   },
   "dependencies": {
     "es6-template-strings": "^2.0.1",
-    "requireindex": "~1.1.0"
+    "requireindex": "~1.2.0"
   },
   "devDependencies": {
     "@mysticatea/eslint-plugin": "^13.0.0",
+    "coveradge": "^0.3.0",
     "eslint": "^6.8.0",
     "eslint-config-ash-nazg": "^17.2.0",
     "eslint-config-standard": "^14.1.0",
@@ -40,7 +49,10 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-unicorn": "^16.1.1",
-    "mocha": "^3.1.2",
+    "mocha": "^7.0.1",
+    "mocha-badge-generator": "^0.4.0",
+    "mocha-multi-reporters": "git+https://github.com/brettz9/mocha-multi-reporters.git#missing-reporter",
+    "nyc": "^15.0.0",
     "typescript": "^3.7.5"
   },
   "engines": {

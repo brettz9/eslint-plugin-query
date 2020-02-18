@@ -1,3 +1,18 @@
+[![npm](https://img.shields.io/npm/v/eslint-plugin-query.svg)](https://www.npmjs.com/package/eslint-plugin-query)
+[![Dependencies](https://img.shields.io/david/brettz9/eslint-plugin-query.svg)](https://david-dm.org/brettz9/eslint-plugin-query)
+[![devDependencies](https://img.shields.io/david/dev/brettz9/eslint-plugin-query.svg)](https://david-dm.org/brettz9/eslint-plugin-query?type=dev)
+
+[![Tests badge](https://raw.githubusercontent.com/brettz9/eslint-plugin-query/master/badges/tests-badge.svg?sanitize=true)](badges/tests-badge.svg)
+[![Coverage badge](https://raw.githubusercontent.com/brettz9/eslint-plugin-query/master/badges/coverage-badge.svg?sanitize=true)](badges/coverage-badge.svg)
+
+[![Known Vulnerabilities](https://snyk.io/test/github/brettz9/eslint-plugin-query/badge.svg)](https://snyk.io/test/github/brettz9/eslint-plugin-query)
+[![Total Alerts](https://img.shields.io/lgtm/alerts/g/brettz9/eslint-plugin-query.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/brettz9/eslint-plugin-query/alerts)
+[![Code Quality: Javascript](https://img.shields.io/lgtm/grade/javascript/g/brettz9/eslint-plugin-query.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/brettz9/eslint-plugin-query/context:javascript)
+
+[![License](https://img.shields.io/npm/l/eslint-plugin-query.svg)](LICENSE-MIT)
+
+[![issuehunt-to-marktext](https://issuehunt.io/static/embed/issuehunt-button-v1.svg)](https://issuehunt.io/r/brettz9/eslint-plugin-query)
+
 # eslint-plugin-query
 
 Add "rules" made of arbitrary selectors to choose lines of context to be reported
@@ -64,3 +79,4 @@ module.exports = {
 ## To-dos
 
 1. Could give `fixable` option (to remove all identified nodes)
+1. Could make CLI to perform one-off searches easier than using `eslint --plugin query --rule 'query/query: 2'`
