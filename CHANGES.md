@@ -2,6 +2,7 @@
 
 ## ?
 
+- Docs: Indicate differences with `no-restricted-syntax`; closes #1
 - Docs: Add license badges
 - Docs: Tips
 
