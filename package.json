@@ -15,6 +15,9 @@
   "bugs": "https://github.com/brettz9/eslint-plugin-query/issues",
   "scripts": {
     "eslint": "eslint --ext=js,md,html .",
+    "license-badge": "license-badger --uncategorizedLicenseTemplate \"\\${license} (\\${name} (\\${version}))\" --filteredTypes=nonempty --textTemplate \"License types\n(project, deps, and bundled devDeps)\" --packageJson --production badges/licenses-badge.svg",
+    "license-badge-dev": "license-badger --corrections --filteredTypes=nonempty --textTemplate \"License types\n(all devDeps)\" --allDevelopment badges/licenses-badge-dev.svg",
+    "license-badges": "npm run license-badge && npm run license-badge-dev",
     "coverage-badge": "coveradge --color brightgreen badges/coverage-badge",
     "mocha": "_mocha --recursive --reporter-options configFile=mocha-multi-reporters.json tests",
     "test": "nyc --all npm run mocha && npm run coverage-badge"
@@ -49,6 +52,7 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-unicorn": "^16.1.1",
+    "license-badger": "^0.9.3",
     "mocha": "^7.0.1",
     "mocha-badge-generator": "^0.4.0",
     "mocha-multi-reporters": "git+https://github.com/brettz9/mocha-multi-reporters.git#missing-reporter",

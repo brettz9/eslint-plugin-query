@@ -1,5 +1,10 @@
 # eslint-plugin-query CHANGES
 
+## ?
+
+- Docs: Add license badges
+- Docs: Tips
+
 ## 0.2.0
 
 - License: Fix `package.json` reference to MIT
