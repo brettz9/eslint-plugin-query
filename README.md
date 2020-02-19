@@ -13,7 +13,7 @@
 
 [![Licenses dev badge](https://raw.githubusercontent.com/brettz9/eslint-plugin-query/master/badges/licenses-badge-dev.svg?sanitize=true)](badges/licenses-badge-dev.svg)
 
-[![License](https://img.shields.io/npm/l/eslint-plugin-query.svg)](LICENSE-MIT)
+<!--[![License](https://img.shields.io/npm/l/eslint-plugin-query.svg)](LICENSE-MIT) -->
 
 [![issuehunt-to-marktext](https://issuehunt.io/static/embed/issuehunt-button-v1.svg)](https://issuehunt.io/r/brettz9/eslint-plugin-query)
 
