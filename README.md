@@ -9,8 +9,8 @@
 [![Total Alerts](https://img.shields.io/lgtm/alerts/g/brettz9/eslint-plugin-query.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/brettz9/eslint-plugin-query/alerts)
 [![Code Quality: Javascript](https://img.shields.io/lgtm/grade/javascript/g/brettz9/eslint-plugin-query.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/brettz9/eslint-plugin-query/context:javascript)
 
-[![Licenses badge](https://raw.githubusercontent.com/SVG-Edit/svgedit/master/badges/licenses-badge.svg?sanitize=true)](badges/licenses-badge.svg)
-[![Licenses dev badge](https://raw.githubusercontent.com/SVG-Edit/svgedit/master/badges/licenses-badge-dev.svg?sanitize=true)](badges/licenses-badge-dev.svg)
+[![Licenses badge](https://raw.githubusercontent.com/brettz9/eslint-plugin-query/master/badges/licenses-badge.svg?sanitize=true)](badges/licenses-badge.svg)
+[![Licenses dev badge](https://raw.githubusercontent.com/brettz9/eslint-plugin-query/master/badges/licenses-badge-dev.svg?sanitize=true)](badges/licenses-badge-dev.svg)
 
 [![License](https://img.shields.io/npm/l/eslint-plugin-query.svg)](LICENSE-MIT)
 
