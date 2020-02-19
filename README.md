@@ -30,8 +30,11 @@ this rule differs in that:
     this output with start and/or end); this makes it ideal for querying data
     rather than just knowing that some syntax is present in such-and-such a
     file at such-and-such a line number.
-2. You can use arbitrary JavaScript in your template syntax
-3. I hope to expand to other rules for querying (and possibly formatting/sorting
+2. This plugin name suggests it can be used to *find* items rather than just
+    restrict them (though when used in linting, it indeed serves the purpose of
+    restriction).
+3. You can use arbitrary JavaScript in your template syntax
+4. I hope to expand to other rules for querying (and possibly formatting/sorting
     results).
 
 ## Installation
