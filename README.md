@@ -20,6 +20,19 @@
 
 Add "rules" made of arbitrary selectors to choose source lines to be reported
 
+## Comparison to `no-restricted-syntax`
+
+While ESLint has a [similar rule](https://eslint.org/docs/rules/no-restricted-syntax),
+this rule differs in that:
+
+1. You can see the actual syntax in the output if you wish (optionally slicing
+    this output with start and/or end); this makes it ideal for querying data
+    rather than just knowing that some syntax is present in such-and-such a
+    file at such-and-such a line number.
+2. You can use arbitrary JavaScript in your template syntax
+3. I hope to expand to other rules for querying (and possibly formatting/sorting
+    results).
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
