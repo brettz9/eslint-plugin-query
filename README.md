@@ -106,9 +106,10 @@ the basis of permanent rules.
     or all functions with a given (jsdoc-described) signature (e.g., all params
     accepting a given type, all typedefs extending a type, all `@public` functions,
     etc.
-1. Add separate rule for to-do specific querying (date, etc.), ideally with sorting
-    also; see <https://github.com/gajus/eslint-plugin-jsdoc/issues/299>,
+1. Add separate rule for to-do specific querying (date, etc.)
+    see <https://github.com/gajus/eslint-plugin-jsdoc/issues/299>,
     <https://github.com/sindresorhus/eslint-plugin-unicorn/issues/238>,
     and <https://github.com/eslint/eslint/issues/11747>.
+    1. Would ideally allow sorting (see <https://eslint.org/docs/developer-guide/working-with-custom-formatters#using-rule-metadata>?)
 1. Add separate rules (all supporting range queries) for date-aware `@since`,
     semver-aware `@version`, integer-aware `@variation`.
