@@ -88,6 +88,6 @@ module.exports = {
 ## To-dos
 
 1. Could give `fixable` option (to remove all identified nodes)
-1. Could make CLI to perform one-off searches easier than using `$(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {"FunctionDeclaration[params.length>4]": {}}}]' .`
+1. Could make CLI to perform one-off searches easier than using `$(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {"FunctionDeclaration[params.length>4]": {end:100}}}]' .`
 1. Add an option to match (additionally) by regex.
 1. Get an AST parser for jsdoc comment blocks, e.g., to search for `@todo` comments
