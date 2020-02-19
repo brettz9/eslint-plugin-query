@@ -104,7 +104,14 @@ module.exports = {
 
 ## Tips
 
-You can make one-off searches, e.g., by:
+You can make one-off searches, e.g., if you have installed `eslint` and this
+plugin globally:
+
+```shell
+eslint --plugin query --rule 'query/query: [2, {queries: {"FunctionDeclaration[params.length>4]": {end:100}}}]' .
+```
+
+Or if you only have `eslint` and this plugin as local installs:
 
 ```shell
 $(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {"FunctionDeclaration[params.length>4]": {end:100}}}]' .
