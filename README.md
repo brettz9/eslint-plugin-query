@@ -117,6 +117,10 @@ Or if you only have `eslint` and this plugin as local installs:
 $(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {"FunctionDeclaration[params.length>4]": {end:100}}}]' .
 ```
 
+Here are the results:
+
+![query-results.png](query-results.png)
+
 Note that you can add the `--no-save` flag (for local or global use) if
 you only want to use this plugin for querying in this manner, and not as
 the basis of permanent rules.
