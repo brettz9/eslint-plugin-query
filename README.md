@@ -54,7 +54,17 @@ Then configure the rules you want to use under the rules section.
 module.exports = {
   rules: {
     'query/query': [2, {
-      // ...
+      queries: {
+        'FunctionDeclaration[params.length>4]': {
+          // All optional
+          // Defaults to just `${result}`
+          template: 'Oops, too long: `${result}`.',
+          // Default: 0 (also accepts negative)
+          start: 0,
+          // Default Infinity (also accepts negative)
+          end: 100
+        }
+      }
     }]
   }
 };
@@ -68,7 +78,6 @@ module.exports = {
   - Its value should be an object with the following optional properties:
     - `template` - A string in the form of an ES6 template (see [es6-template-strings](https://github.com/medikoo/es6-template-strings/)). If not present, the
       `result` will be used instead. If present, it will be passed the following:
-      - `ruleID` - The name of this rule (`query/query`)
       - `result` - The selector-identified node represented as a string (i.e.,
         the lines of code pointed to by the selector)
     - `start` - An integer at which to begin slicing out of the selected lines of code.
@@ -79,6 +88,6 @@ module.exports = {
 ## To-dos
 
 1. Could give `fixable` option (to remove all identified nodes)
-1. Could make CLI to perform one-off searches easier than using `eslint --plugin query --rule 'query/query: 2'`
+1. Could make CLI to perform one-off searches easier than using `$(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {"FunctionDeclaration[params.length>4]": {}}}]' .`
 1. Add an option to match (additionally) by regex.
 1. Get an AST parser for jsdoc comment blocks, e.g., to search for `@todo` comments

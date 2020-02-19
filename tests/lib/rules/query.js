@@ -29,7 +29,6 @@ ruleTester.run('query', rule, {
         {
           queries: {
             'FunctionDeclaration[params.length>3]': {
-              // eslint-disable-next-line no-template-curly-in-string
               template: 'Oops, too long: ${result}.'
             }
           }
@@ -45,7 +44,6 @@ ruleTester.run('query', rule, {
         {
           queries: {
             'FunctionDeclaration[params.length>1]': {
-              // eslint-disable-next-line no-template-curly-in-string
               template: 'Oops, too long: `${result}`.'
             }
           }
@@ -67,6 +65,23 @@ ruleTester.run('query', rule, {
       ],
       errors: [{
         message: 'function a (b, c) {}',
+        type: 'FunctionDeclaration'
+      }]
+    },
+    {
+      code: 'function a (b, c) {}',
+      options: [
+        {
+          queries: {
+            'FunctionDeclaration[params.length>1]': {
+              start: 9,
+              end: -3
+            }
+          }
+        }
+      ],
+      errors: [{
+        message: 'a (b, c)',
         type: 'FunctionDeclaration'
       }]
     }

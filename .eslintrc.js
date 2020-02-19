@@ -14,5 +14,6 @@ module.exports = {
     sourceType: 'script'
   },
   rules: {
+    'no-template-curly-in-string': 0
   }
 };
