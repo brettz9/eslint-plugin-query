@@ -85,9 +85,30 @@ module.exports = {
     - `end` - An integer at which to end slicing out of the selected lines of code.
       May be negative as with `slice`.
 
+## Tips
+
+You can make one-off searches, e.g., by:
+
+```shell
+$(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {"FunctionDeclaration[params.length>4]": {end:100}}}]' .
+```
+
+Note that you can add the `--no-save` flag (for local or global use) if
+you only want to use this plugin for querying in this manner, and not as
+the basis of permanent rules.
+
 ## To-dos
 
 1. Could give `fixable` option (to remove all identified nodes)
-1. Could make CLI to perform one-off searches easier than using `$(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {"FunctionDeclaration[params.length>4]": {end:100}}}]' .`
+1. Could make CLI to perform one-off searches easier
 1. Add an option to match (additionally) by regex.
-1. Get an AST parser for jsdoc comment blocks, e.g., to search for `@todo` comments
+1. Get an AST parser for jsdoc comment blocks, e.g., to search for `@todo` comments,
+    or all functions with a given (jsdoc-described) signature (e.g., all params
+    accepting a given type, all typedefs extending a type, all `@public` functions,
+    etc.
+1. Add separate rule for to-do specific querying (date, etc.), ideally with sorting
+    also; see <https://github.com/gajus/eslint-plugin-jsdoc/issues/299>,
+    <https://github.com/sindresorhus/eslint-plugin-unicorn/issues/238>,
+    and <https://github.com/eslint/eslint/issues/11747>.
+1. Add separate rules (all supporting range queries) for date-aware `@since`,
+    semver-aware `@version`, integer-aware `@variation`.
