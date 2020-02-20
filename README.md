@@ -199,3 +199,4 @@ the basis of permanent rules.
         duplication (e.g., querying for all public method names to
         generate documentation headings or embed example code).
     1. Using a JS XSLT equivalent to reshape an entire JS file into HTML
+    1. Searching for code within an IDE (within or across files)
