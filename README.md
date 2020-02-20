@@ -162,12 +162,18 @@ the basis of permanent rules.
     find all Date objects, use `/** @type {Date} */`. Likewise with
     TypeScript expressions (again, not as much for validation, which TS
     already does, but for querying documents using TS).
-    1. Could make selector which allows such matching, e.g., `:matches('jsdoc', '@param {string}\n@param {Date}')` or `:matches('typescript', '(...args: string[]) => void')`
+    1. Could make selector which allows such matching, e.g.,
+        `:matches('jsdoc', '@param {string}\n@param {Date}')` or
+        `:matches('typescript', '(...args: string[]) => void')`
+    1. In supporting this, could make utility for compiling jsdoc (or (a
+        subset of) TS) into selectors (and vice versa). Use
+        `comment-parser`.
 1. Make aggregate selectors, e.g., "string" to find string literals or
     string literals joined in a binary expression, etc. Then can search
     for a `ReturnStatement` with `string` to get the return type.
 1. Add separate rules (all supporting range queries) for semver-aware
     `@since` or `@version`, integer-aware `@variation`, (and date-aware
     abilities for tags indicated in options (e.g., if one defined `@date`).
-1. Object to show result as Node JSON object (see [esquery demo](https://estools.github.io/esquery/))
-    rather than string
+1. Object to show result as Node JSON object (see
+    [esquery demo](https://estools.github.io/esquery/)) rather than
+    string.
