@@ -142,6 +142,11 @@ the basis of permanent rules.
     <https://github.com/sindresorhus/eslint-plugin-unicorn/issues/238>,
     and <https://github.com/eslint/eslint/issues/11747>.
     1. Would ideally allow sorting (see <https://eslint.org/docs/developer-guide/working-with-custom-formatters#using-rule-metadata>?)
-    1. Also lint to ensure internal code has an actual date format.
-1. Add separate rules (all supporting range queries) for date-aware `@since`,
-    semver-aware `@version`, integer-aware `@variation`.
+    1. Also lint to ensure even unexpired to-dos have an actual date
+        format (see Unicorn to-do rule). Could use
+        `jsdoc/match-description` if Unicorn isn't supporting (and option
+        to it to show text of description so can be used in queries, also
+        for other rules?).
+1. Add separate rules (all supporting range queries) for semver-aware
+    `@since` or `@version`, integer-aware `@variation`, (and date-aware
+    abilities for tags indicated in options (e.g., if one defined `@date`).
