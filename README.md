@@ -179,3 +179,14 @@ the basis of permanent rules.
 1. Object to show result as Node JSON object (see
     [esquery demo](https://estools.github.io/esquery/)) rather than
     string.
+1. Other interesting use cases for selectors (independent of this plugin):
+    1. A selector syntax for defining JS syntax highlighters (e.g.,
+        `FunctionDeclaration {color: green;}`)
+    1. Potentially less brittle monkey-patching
+    1. Dynamically evaluating snippets, even private, from within other
+        trusted files (e.g., user templates).
+    1. Making links within jsdoc documentation to specific parts of code
+    1. Embedding code snippets within Markdown documentation without
+        duplication (e.g., querying for all public method names to
+        generate documentation headings or embed example code).
+    1. Using a JS XSLT equivalent to reshape an entire JS file into HTML
