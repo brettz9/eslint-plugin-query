@@ -19,9 +19,19 @@
 
 # eslint-plugin-query
 
-Add "rules" made of arbitrary selectors to choose source lines to be reported
+Add "rules" made of arbitrary [selectors](https://eslint.org/docs/developer-guide/selectors) to choose source lines to be reported.
 
-## Comparison to `no-restricted-syntax`
+## Comparison to `esquery` tool
+
+[esquery](https://github.com/estools/esquery) ([demo](https://estools.github.io/esquery/)),
+a tool used within ESLint, allows queries by AST selector. Here is why we
+make a separate tool:
+
+1. Be able to use from the command line
+1. Ability to see the output stringified
+1. Apply to linting if desired as well as querying
+
+## Comparison to ESLint `no-restricted-syntax` rule
 
 While ESLint has a [similar rule](https://eslint.org/docs/rules/no-restricted-syntax),
 this rule differs in that:
@@ -159,3 +169,5 @@ the basis of permanent rules.
 1. Add separate rules (all supporting range queries) for semver-aware
     `@since` or `@version`, integer-aware `@variation`, (and date-aware
     abilities for tags indicated in options (e.g., if one defined `@date`).
+1. Object to show result as Node JSON object (see [esquery demo](https://estools.github.io/esquery/))
+    rather than string

@@ -3,6 +3,7 @@
 ## ?
 
 - Docs: Indicate differences with `no-restricted-syntax`; closes #1
+- Docs: Comparison to `equery`
 - Docs: Add license badges
 - Docs: Tips
 
