@@ -1,5 +1,11 @@
 # eslint-plugin-query CHANGES
 
+## 0.4.0
+
+- Breaking change: `parent` functionality now defaults to `false`.
+- Enhancement: If `format` is "node", setting `parent` to `true`
+    will also show the `parent` properties on the AST.
+
 ## 0.3.0
 
 - Enhancement: Add `format`/`defaultFormat` with `"node"` returning the

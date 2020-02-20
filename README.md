@@ -120,6 +120,9 @@ module.exports = {
             - `end` - An integer at which to end slicing out of the
                 selected lines of code. May be negative as with `slice`.
             - `format` - May override any `defaultFormat` (see below).
+            - `parent` - If `format` is "node", setting this to `true`
+                will also show the `parent` properties on the AST. Defaults
+                to `false`.
     - an optional `defaultFormat` string (`"string"` (the default) or `"node"`).
         If `node` is chosen will be represented as stringified Node AST
         rather than the string found in source.

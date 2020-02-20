@@ -10,7 +10,7 @@
 
 const {RuleTester} = require('eslint');
 const rules = require('../../../lib/');
-const {functionAST} = require('../fixtures/ast.js');
+const {functionAST, functionASTNoParent} = require('../fixtures/ast.js');
 
 const rule = rules.rules.query;
 
@@ -92,7 +92,8 @@ ruleTester.run('query', rule, {
         {
           queries: {
             'FunctionDeclaration[params.length>1]': {
-              format: 'node'
+              format: 'node',
+              parent: true
             }
           }
         }
@@ -114,7 +115,23 @@ ruleTester.run('query', rule, {
         }
       ],
       errors: [{
-        message: functionAST,
+        message: functionASTNoParent,
+        type: 'FunctionDeclaration'
+      }]
+    },
+    {
+      code: 'function a (b, c) {}',
+      options: [
+        {
+          defaultFormat: 'node',
+          queries: {
+            'FunctionDeclaration[params.length>1]': {
+            }
+          }
+        }
+      ],
+      errors: [{
+        message: functionASTNoParent,
         type: 'FunctionDeclaration'
       }]
     }

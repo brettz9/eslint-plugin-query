@@ -314,3 +314,107 @@ exports.functionAST = `{
     "parent": null
   }
 }`;
+
+exports.functionASTNoParent = `{
+  "type": "FunctionDeclaration",
+  "start": 0,
+  "end": 20,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 1,
+      "column": 20
+    }
+  },
+  "range": [
+    0,
+    20
+  ],
+  "id": {
+    "type": "Identifier",
+    "start": 9,
+    "end": 10,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 9
+      },
+      "end": {
+        "line": 1,
+        "column": 10
+      }
+    },
+    "range": [
+      9,
+      10
+    ],
+    "name": "a"
+  },
+  "params": [
+    {
+      "type": "Identifier",
+      "start": 12,
+      "end": 13,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 12
+        },
+        "end": {
+          "line": 1,
+          "column": 13
+        }
+      },
+      "range": [
+        12,
+        13
+      ],
+      "name": "b"
+    },
+    {
+      "type": "Identifier",
+      "start": 15,
+      "end": 16,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 15
+        },
+        "end": {
+          "line": 1,
+          "column": 16
+        }
+      },
+      "range": [
+        15,
+        16
+      ],
+      "name": "c"
+    }
+  ],
+  "body": {
+    "type": "BlockStatement",
+    "start": 18,
+    "end": 20,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 18
+      },
+      "end": {
+        "line": 1,
+        "column": 20
+      }
+    },
+    "range": [
+      18,
+      20
+    ],
+    "body": []
+  },
+  "expression": false,
+  "generator": false
+}`;
