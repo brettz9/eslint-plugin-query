@@ -102,18 +102,27 @@ module.exports = {
 
 ## Supported Rules
 
-- `query/query` - Requires a single options object, with a `queries` object:
-  - Its key should be a string representing the
-  [selector](https://eslint.org/docs/developer-guide/selectors).
-  - Its value should be an object with the following optional properties:
-    - `template` - A string in the form of an ES6 template (see [es6-template-strings](https://github.com/medikoo/es6-template-strings/)). If not present, the
-      `result` will be used instead. If present, it will be passed the following:
-      - `result` - The selector-identified node represented as a string (i.e.,
-        the lines of code pointed to by the selector)
-    - `start` - An integer at which to begin slicing out of the selected lines of code.
-      May be negative as with `slice`.
-    - `end` - An integer at which to end slicing out of the selected lines of code.
-      May be negative as with `slice`.
+- `query/query` - Requires a single options object, with:
+    - a `queries` object:
+        - Its key should be a string representing the
+            [selector](https://eslint.org/docs/developer-guide/selectors).
+        - Its value should be an object with the following optional properties:
+            - `template` - A string in the form of an ES6 template (see
+                [es6-template-strings](https://github.com/medikoo/es6-template-strings/)).
+                If not present, the `result` will be used instead. If present,
+                it will be passed the following:
+                    - `result` - The selector-identified node represented as
+                        a string (i.e., the lines of code pointed to by
+                        the selector)
+            - `start` - An integer at which to begin slicing out of
+                the selected lines of code. May be negative as with
+                `slice`.
+            - `end` - An integer at which to end slicing out of the
+                selected lines of code. May be negative as with `slice`.
+            - `format` - May override any `defaultFormat` (see below).
+    - an optional `defaultFormat` string (`"string"` (the default) or `"node"`).
+        If `node` is chosen will be represented as stringified Node AST
+        rather than the string found in source.
 
 ## Tips
 
@@ -176,9 +185,6 @@ the basis of permanent rules.
 1. Add separate rules (all supporting range queries) for semver-aware
     `@since` or `@version`, integer-aware `@variation`, (and date-aware
     abilities for tags indicated in options (e.g., if one defined `@date`).
-1. Object to show result as Node JSON object (see
-    [esquery demo](https://estools.github.io/esquery/)) rather than
-    string.
 1. Other interesting use cases for selectors (independent of this plugin):
     1. A selector syntax for defining JS syntax highlighters (e.g.,
         `FunctionDeclaration {color: green;}`)

@@ -1,7 +1,9 @@
 # eslint-plugin-query CHANGES
 
-## ?
+## 0.3.0
 
+- Enhancement: Add `format`/`defaultFormat` with `"node"` returning the
+    AST stringified object.
 - Docs: Indicate differences with `no-restricted-syntax`; closes #1
 - Docs: Comparison to `equery`
 - Docs: Add license badges

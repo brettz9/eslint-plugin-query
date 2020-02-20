@@ -4,18 +4,19 @@
  */
 'use strict';
 
-// ------------------------------------------------------------------------------
+//
 // Requirements
-// ------------------------------------------------------------------------------
+//
 
 const {RuleTester} = require('eslint');
 const rules = require('../../../lib/');
+const {functionAST} = require('../fixtures/ast.js');
 
 const rule = rules.rules.query;
 
-// ------------------------------------------------------------------------------
+//
 // Tests
-// ------------------------------------------------------------------------------
+//
 
 const ruleTester = new RuleTester();
 ruleTester.run('query', rule, {
@@ -82,6 +83,38 @@ ruleTester.run('query', rule, {
       ],
       errors: [{
         message: 'a (b, c)',
+        type: 'FunctionDeclaration'
+      }]
+    },
+    {
+      code: 'function a (b, c) {}',
+      options: [
+        {
+          queries: {
+            'FunctionDeclaration[params.length>1]': {
+              format: 'node'
+            }
+          }
+        }
+      ],
+      errors: [{
+        message: functionAST,
+        type: 'FunctionDeclaration'
+      }]
+    },
+    {
+      code: 'function a (b, c) {}',
+      options: [
+        {
+          defaultFormat: 'node',
+          queries: {
+            'FunctionDeclaration[params.length>1]': {
+            }
+          }
+        }
+      ],
+      errors: [{
+        message: functionAST,
         type: 'FunctionDeclaration'
       }]
     }

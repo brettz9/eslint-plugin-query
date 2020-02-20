@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-query",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Add \"rules\" made of arbitrary selectors to choose source lines to be reported",
   "keywords": [
     "eslint",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "es6-template-strings": "^2.0.1",
+    "fast-safe-stringify": "^2.0.7",
     "requireindex": "~1.2.0"
   },
   "devDependencies": {
