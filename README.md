@@ -152,6 +152,7 @@ the basis of permanent rules.
     find all Date objects, use `/** @type {Date} */`. Likewise with
     TypeScript expressions (again, not as much for validation, which TS
     already does, but for querying documents using TS).
+    1. Could make selector which allows such matching, e.g., `:matches('jsdoc', '@param {string}\n@param {Date}')` or `:matches('typescript', '(...args: string[]) => void')`
 1. Make aggregate selectors, e.g., "string" to find string literals or
     string literals joined in a binary expression, etc. Then can search
     for a `ReturnStatement` with `string` to get the return type.
