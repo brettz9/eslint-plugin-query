@@ -148,6 +148,10 @@ the basis of permanent rules.
         `jsdoc/match-description` if Unicorn isn't supporting (and option
         to it to show text of description so can be used in queries, also
         for other rules like `jsdoc/no-undefined-types`?).
+1. Might add separate rule using jsdoc blocks in place of selectors, e.g., to
+    find all Date objects, use `/** @type {Date} */`. Likewise with
+    TypeScript expressions (again, not as much for validation, which TS
+    already does, but for querying documents using TS).
 1. Add separate rules (all supporting range queries) for semver-aware
     `@since` or `@version`, integer-aware `@variation`, (and date-aware
     abilities for tags indicated in options (e.g., if one defined `@date`).
