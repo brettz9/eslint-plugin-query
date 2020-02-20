@@ -142,5 +142,6 @@ the basis of permanent rules.
     <https://github.com/sindresorhus/eslint-plugin-unicorn/issues/238>,
     and <https://github.com/eslint/eslint/issues/11747>.
     1. Would ideally allow sorting (see <https://eslint.org/docs/developer-guide/working-with-custom-formatters#using-rule-metadata>?)
+    1. Also lint to ensure internal code has an actual date format.
 1. Add separate rules (all supporting range queries) for date-aware `@since`,
     semver-aware `@version`, integer-aware `@variation`.
