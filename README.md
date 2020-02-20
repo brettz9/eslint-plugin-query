@@ -167,7 +167,9 @@ the basis of permanent rules.
         `:matches('typescript', '(...args: string[]) => void')`
     1. In supporting this, could make utility for compiling jsdoc (or (a
         subset of) TS) into selectors (and vice versa). Use
-        `comment-parser`.
+        `comment-parser`. Could also convert jsdoc to TS by stripping
+        out types and putting inline (as an `eslint-plugin-jsdoc` rule)
+        or in reverse.
 1. Make aggregate selectors, e.g., "string" to find string literals or
     string literals joined in a binary expression, etc. Then can search
     for a `ReturnStatement` with `string` to get the return type.
