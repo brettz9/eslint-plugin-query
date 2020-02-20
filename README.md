@@ -136,7 +136,8 @@ the basis of permanent rules.
 1. Get an AST parser for jsdoc comment blocks, e.g., to search for `@todo` comments,
     or all functions with a given (jsdoc-described) signature (e.g., all params
     accepting a given type, all typedefs extending a type, all `@public` functions,
-    etc.
+    etc. If selectors don't support `parent`, would be ideal to add support,
+    e.g., to query for parent comment of a given function signature.
 1. Add separate rule for to-do specific querying (date, etc.)
     see <https://github.com/gajus/eslint-plugin-jsdoc/issues/299>,
     <https://github.com/sindresorhus/eslint-plugin-unicorn/issues/238>,
@@ -146,7 +147,7 @@ the basis of permanent rules.
         format (see Unicorn to-do rule). Could use
         `jsdoc/match-description` if Unicorn isn't supporting (and option
         to it to show text of description so can be used in queries, also
-        for other rules?).
+        for other rules like `jsdoc/no-undefined-types`?).
 1. Add separate rules (all supporting range queries) for semver-aware
     `@since` or `@version`, integer-aware `@variation`, (and date-aware
     abilities for tags indicated in options (e.g., if one defined `@date`).
