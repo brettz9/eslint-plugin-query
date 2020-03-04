@@ -1,5 +1,9 @@
 # eslint-plugin-query CHANGES
 
+## ?
+
+- npm: Update devDeps
+
 ## 0.4.0
 
 - Breaking change: `parent` functionality now defaults to `false`.
