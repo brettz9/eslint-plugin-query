@@ -188,6 +188,7 @@ the basis of permanent rules.
 1. Add separate rules (all supporting range queries) for semver-aware
     `@since` or `@version`, integer-aware `@variation`, (and date-aware
     abilities for tags indicated in options (e.g., if one defined `@date`).
+    Also useful for `@license` and `@copyright` searching
 1. Other interesting use cases for selectors (independent of this plugin):
     1. A selector syntax for defining JS syntax highlighters (e.g.,
         `FunctionDeclaration {color: green;}`)
