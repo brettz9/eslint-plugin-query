@@ -186,6 +186,10 @@ the basis of permanent rules.
     string literals joined in a binary expression, etc. Then can search
     for a `ReturnStatement` with `string` to get the return type.
 1. Allow dir/file glob at beginning of selector, e.g., `docs/** IfStatement`
+1. For file iteration desired in `eslint-plugin-privileges`, could offer
+    a preprocessor for now which accepts an open-ended query and gives
+    empty arrays if not found to be within iterator chain. (Not optimal
+    but could work for proof-of-concept.)
 1. Add separate rules (all supporting range queries) for semver-aware
     `@since` or `@version`, integer-aware `@variation`, (and date-aware
     abilities for tags indicated in options (e.g., if one defined `@date`).
