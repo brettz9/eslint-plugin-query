@@ -186,7 +186,7 @@ the basis of permanent rules.
     string literals joined in a binary expression, etc. Then can search
     for a `ReturnStatement` with `string` to get the return type.
 1. Allow dir/file glob at beginning of selector, e.g., `docs/** IfStatement`
-1. Could use [`eslint-file-traverse`](https://github.com/brettz9/eslint-file-traverse)
+1. Could use [`es-file-traverse`](https://github.com/brettz9/es-file-traverse)
     to limit queries to those that are visited by imports.
 1. Add separate rules (all supporting range queries) for semver-aware
     `@since` or `@version`, integer-aware `@variation`, (and date-aware
