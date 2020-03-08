@@ -185,6 +185,7 @@ the basis of permanent rules.
 1. Make aggregate selectors, e.g., "string" to find string literals or
     string literals joined in a binary expression, etc. Then can search
     for a `ReturnStatement` with `string` to get the return type.
+1. Allow dir/file glob at beginning of selector, e.g., `docs/** IfStatement`
 1. Add separate rules (all supporting range queries) for semver-aware
     `@since` or `@version`, integer-aware `@variation`, (and date-aware
     abilities for tags indicated in options (e.g., if one defined `@date`).
