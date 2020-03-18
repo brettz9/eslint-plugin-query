@@ -2,7 +2,7 @@
 
 ## ?
 
-- npm: Update devDeps
+- npm: Update devDeps and `package-lock.json`
 
 ## 0.4.0
 
