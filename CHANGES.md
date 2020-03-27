@@ -2,6 +2,7 @@
 
 ## ?
 
+- Docs: Update coverage badge per latest coveradge
 - npm: Update devDeps and `package-lock.json`
 
 ## 0.4.0
