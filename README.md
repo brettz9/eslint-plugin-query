@@ -150,6 +150,14 @@ Note that you can add the `--no-save` flag (for local or global use) if
 you only want to use this plugin for querying in this manner, and not as
 the basis of permanent rules.
 
+Another use case is ensuring a file or set of files (e.g., within `overrides`)
+(or targeted via glob if on the command line) only has one type or a set of
+types (by using the `:not()` esquery selector):
+
+```shell
+$(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {":not(FunctionDeclaration,FunctionExpression)": {end:100}}}]' .
+```
+
 ## To-dos
 
 1. Could give `fixable` option (to remove all identified nodes)
