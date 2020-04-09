@@ -195,7 +195,8 @@ $(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {":not(Funct
     for a `ReturnStatement` with `string` to get the return type.
 1. Allow dir/file glob at beginning of selector, e.g., `docs/** IfStatement`
 1. Could use [`es-file-traverse`](https://github.com/brettz9/es-file-traverse)
-    to limit queries to those that are visited by imports.
+    to limit queries to those that are visited by imports (including with
+    "Other interesting use cases" below).
 1. Add separate rules (all supporting range queries) for semver-aware
     `@since` or `@version`, integer-aware `@variation`, (and date-aware
     abilities for tags indicated in options (e.g., if one defined `@date`).
@@ -212,3 +213,5 @@ $(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {":not(Funct
         generate documentation headings or embed example code).
     1. Using a JS XSLT equivalent to reshape an entire JS file into HTML
     1. Searching for code within an IDE (within or across files)
+    1. Create badges showing summary of number of functions, classes, et.
+        along with number of lines of code
