@@ -162,6 +162,8 @@ $(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {":not(Funct
 
 1. Could give `fixable` option (to remove all identified nodes)
 1. Could make CLI to perform one-off searches easier
+    1. CLI could also perform aggregate counts of expressions, e.g.,
+        how many `FunctionDeclaration`'s one had in a file or across files
 1. Add an option to match (additionally) by regex.
 1. Get an AST parser for jsdoc comment blocks, e.g., to search for `@todo` comments,
     or all functions with a given (jsdoc-described) signature (e.g., all params
@@ -190,7 +192,7 @@ $(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {":not(Funct
         `comment-parser`. Could also convert jsdoc to TS by stripping
         out types and putting inline (as an `eslint-plugin-jsdoc` rule)
         or in reverse.
-1. Make aggregate selectors, e.g., "string" to find string literals or
+1. Make combining selectors, e.g., "string" to find string literals or
     string literals joined in a binary expression, etc. Then can search
     for a `ReturnStatement` with `string` to get the return type.
 1. Allow dir/file glob at beginning of selector, e.g., `docs/** IfStatement`
