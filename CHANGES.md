@@ -2,6 +2,7 @@
 
 ## ?
 
+- Enhancement: Add `meta: {type: "suggestion"}`
 - Docs: Update coverage badge per latest coveradge
 - npm: Update devDeps and `package-lock.json`
 
