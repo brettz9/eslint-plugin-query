@@ -36,6 +36,7 @@
   "devDependencies": {
     "@mysticatea/eslint-plugin": "^13.0.0",
     "coveradge": "^0.5.0",
+    "cypress-multi-reporters": "^1.2.4",
     "eslint": "^6.8.0",
     "eslint-config-ash-nazg": "^18.0.0",
     "eslint-config-standard": "^14.1.1",
@@ -56,7 +57,6 @@
     "license-badger": "^0.12.7",
     "mocha": "^7.1.1",
     "mocha-badge-generator": "^0.5.2",
-    "mocha-multi-reporters": "git+https://github.com/brettz9/mocha-multi-reporters.git#missing-reporter",
     "nyc": "^15.0.0",
     "typescript": "^3.8.3"
   },
