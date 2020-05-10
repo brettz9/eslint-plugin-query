@@ -1,10 +1,14 @@
 # eslint-plugin-query CHANGES
 
-## ?
+## 0.5.0
 
 - Enhancement: Add `meta: {type: "suggestion"}`
 - Docs: Update coverage badge per latest coveradge
-- npm: Update devDeps and `package-lock.json`
+- Docs: Update badges per latest updates
+- npm: Update devDeps (linting, badges, mocha/nyc)
+- npm: `package-lock.json`
+- Testing: Update test expectations per latest eslint (dropped
+    `start`/`end` properties)
 
 ## 0.4.0
 

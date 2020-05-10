@@ -2,8 +2,6 @@
 
 exports.functionAST = `{
   "type": "FunctionDeclaration",
-  "start": 0,
-  "end": 20,
   "loc": {
     "start": {
       "line": 1,
@@ -20,8 +18,6 @@ exports.functionAST = `{
   ],
   "id": {
     "type": "Identifier",
-    "start": 9,
-    "end": 10,
     "loc": {
       "start": {
         "line": 1,
@@ -42,8 +38,6 @@ exports.functionAST = `{
   "params": [
     {
       "type": "Identifier",
-      "start": 12,
-      "end": 13,
       "loc": {
         "start": {
           "line": 1,
@@ -63,8 +57,6 @@ exports.functionAST = `{
     },
     {
       "type": "Identifier",
-      "start": 15,
-      "end": 16,
       "loc": {
         "start": {
           "line": 1,
@@ -85,8 +77,6 @@ exports.functionAST = `{
   ],
   "body": {
     "type": "BlockStatement",
-    "start": 18,
-    "end": 20,
     "loc": {
       "start": {
         "line": 1,
@@ -108,8 +98,6 @@ exports.functionAST = `{
   "generator": false,
   "parent": {
     "type": "Program",
-    "start": 0,
-    "end": 20,
     "loc": {
       "start": {
         "line": 1,
@@ -133,8 +121,6 @@ exports.functionAST = `{
       {
         "type": "Keyword",
         "value": "function",
-        "start": 0,
-        "end": 8,
         "loc": {
           "start": {
             "line": 1,
@@ -153,8 +139,6 @@ exports.functionAST = `{
       {
         "type": "Identifier",
         "value": "a",
-        "start": 9,
-        "end": 10,
         "loc": {
           "start": {
             "line": 1,
@@ -173,8 +157,6 @@ exports.functionAST = `{
       {
         "type": "Punctuator",
         "value": "(",
-        "start": 11,
-        "end": 12,
         "loc": {
           "start": {
             "line": 1,
@@ -193,8 +175,6 @@ exports.functionAST = `{
       {
         "type": "Identifier",
         "value": "b",
-        "start": 12,
-        "end": 13,
         "loc": {
           "start": {
             "line": 1,
@@ -213,8 +193,6 @@ exports.functionAST = `{
       {
         "type": "Punctuator",
         "value": ",",
-        "start": 13,
-        "end": 14,
         "loc": {
           "start": {
             "line": 1,
@@ -233,8 +211,6 @@ exports.functionAST = `{
       {
         "type": "Identifier",
         "value": "c",
-        "start": 15,
-        "end": 16,
         "loc": {
           "start": {
             "line": 1,
@@ -253,8 +229,6 @@ exports.functionAST = `{
       {
         "type": "Punctuator",
         "value": ")",
-        "start": 16,
-        "end": 17,
         "loc": {
           "start": {
             "line": 1,
@@ -273,8 +247,6 @@ exports.functionAST = `{
       {
         "type": "Punctuator",
         "value": "{",
-        "start": 18,
-        "end": 19,
         "loc": {
           "start": {
             "line": 1,
@@ -293,8 +265,6 @@ exports.functionAST = `{
       {
         "type": "Punctuator",
         "value": "}",
-        "start": 19,
-        "end": 20,
         "loc": {
           "start": {
             "line": 1,
@@ -317,8 +287,6 @@ exports.functionAST = `{
 
 exports.functionASTNoParent = `{
   "type": "FunctionDeclaration",
-  "start": 0,
-  "end": 20,
   "loc": {
     "start": {
       "line": 1,
@@ -335,8 +303,6 @@ exports.functionASTNoParent = `{
   ],
   "id": {
     "type": "Identifier",
-    "start": 9,
-    "end": 10,
     "loc": {
       "start": {
         "line": 1,
@@ -356,8 +322,6 @@ exports.functionASTNoParent = `{
   "params": [
     {
       "type": "Identifier",
-      "start": 12,
-      "end": 13,
       "loc": {
         "start": {
           "line": 1,
@@ -376,8 +340,6 @@ exports.functionASTNoParent = `{
     },
     {
       "type": "Identifier",
-      "start": 15,
-      "end": 16,
       "loc": {
         "start": {
           "line": 1,
@@ -397,8 +359,6 @@ exports.functionASTNoParent = `{
   ],
   "body": {
     "type": "BlockStatement",
-    "start": 18,
-    "end": 20,
     "loc": {
       "start": {
         "line": 1,
