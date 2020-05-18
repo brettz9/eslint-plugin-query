@@ -13,6 +13,15 @@ module.exports = {
   parserOptions: {
     sourceType: 'script'
   },
+  overrides: [{
+    files: 'tests/**',
+    env: {
+      mocha: true
+    },
+    globals: {
+      expect: true
+    }
+  }],
   rules: {
     // Add back after overrides from Node plugin
     'no-process-exit': 0,

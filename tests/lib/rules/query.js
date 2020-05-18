@@ -51,6 +51,23 @@ ruleTester.run('query', rule, {
         }
       ],
       errors: [{
+        message: 'Oops, too long: `"function a (b, c) {}"`.',
+        type: 'FunctionDeclaration'
+      }]
+    },
+    {
+      code: 'function a (b, c) {}',
+      options: [
+        {
+          defaultFormat: 'string',
+          queries: {
+            'FunctionDeclaration[params.length>1]': {
+              template: 'Oops, too long: `${result}`.'
+            }
+          }
+        }
+      ],
+      errors: [{
         message: 'Oops, too long: `function a (b, c) {}`.',
         type: 'FunctionDeclaration'
       }]
@@ -65,7 +82,7 @@ ruleTester.run('query', rule, {
         }
       ],
       errors: [{
-        message: 'function a (b, c) {}',
+        message: '"function a (b, c) {}"',
         type: 'FunctionDeclaration'
       }]
     },
@@ -75,8 +92,8 @@ ruleTester.run('query', rule, {
         {
           queries: {
             'FunctionDeclaration[params.length>1]': {
-              start: 9,
-              end: -3
+              start: 10,
+              end: -4
             }
           }
         }

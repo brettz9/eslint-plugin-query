@@ -127,10 +127,36 @@ module.exports = {
         If `node` is chosen will be represented as stringified Node AST
         rather than the string found in source.
 
+## CLI
+
+![cli.svg](https://raw.githubusercontent.com/brettz9/license-badger/master/cli.svg?sanitize=true)
+
 ## Tips
 
-You can make one-off searches, e.g., if you have installed `eslint` and this
-plugin globally:
+### Queries into badges
+
+You might use the likes of [eslint-formatter-badger](https://github.com/brettz9/eslint-formatter-badger)
+to build a badge counting the use of certain JavaScript features out of
+your results, e.g., if you wanted to show the number of
+`FunctionDeclaration`'s in your project.
+
+Unless you wish to count the aggregate of total of multiple selectors, you'd
+probably need to create separate badges for each type (since the
+`eslint-formatter-badger` determines type by the whole rule (e.g., from the
+rule's `meta.type`) rather than by the rule options (in this case `queries`)
+that are in use). Such an approach would allow you to get the individual
+count for each query type.
+
+You could then display these badges adjacently, optionally with different
+colors, and with human-readable text (e.g., "Function declarations")),
+possibly with a plain intro badge before them (e.g., "Language Feature
+Counts").
+
+### One-off searches
+
+Though it is probably just easier to use the CLI, it may be of interest
+to know that you can use the ESLint binary to make one-off searches,
+e.g., if you have installed `eslint` and this plugin globally:
 
 ```shell
 eslint --plugin query --rule 'query/query: [2, {queries: {"FunctionDeclaration[params.length>4]": {end:100}}}]' .
@@ -161,9 +187,6 @@ $(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {":not(Funct
 ## To-dos
 
 1. Could give `fixable` option (to remove all identified nodes)
-1. Could make CLI to perform one-off searches easier
-    1. CLI could also perform aggregate counts of expressions, e.g.,
-        how many `FunctionDeclaration`'s one had in a file or across files
 1. Add an option to match (additionally) by regex.
 1. Add an option to highlight certain esqueries out of the results, e.g.,
     to show the list of parameter names of all functions
@@ -177,6 +200,9 @@ $(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {":not(Funct
     <https://github.com/sindresorhus/eslint-plugin-unicorn/issues/238>,
     and <https://github.com/eslint/eslint/issues/11747>.
     1. Would ideally allow sorting (see <https://eslint.org/docs/developer-guide/working-with-custom-formatters#using-rule-metadata>?)
+        1. Note: Could implement with new formatter, and the formatter
+            could be used for other purposes as well (e.g., showing rule
+            errors by `meta.type` or in this case, by query)
     1. Also lint to ensure even unexpired to-dos have an actual date
         format (see Unicorn to-do rule). Could use
         `jsdoc/match-description` if Unicorn isn't supporting (and option

@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-query",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Add \"rules\" made of arbitrary selectors to choose source lines to be reported",
   "keywords": [
     "eslint",
@@ -14,13 +14,16 @@
   "homepage": "https://github.com/brettz9/eslint-plugin-query",
   "bugs": "https://github.com/brettz9/eslint-plugin-query/issues",
   "scripts": {
+    "cli": "./bin/index.js",
     "eslint": "eslint --ext=js,md,html .",
+    "local-test": "eslint --rulesdir lib/rules --rule 'query: [2, {queries: {\"VariableDeclaration\": {end:100}}}]' .",
     "prepublishOnly": "npm run license-badges",
-    "license-badge": "license-badger --uncategorizedLicenseTemplate \"\\${license} (\\${name} (\\${version}))\" --filteredTypes=nonempty --textTemplate \"License types\n(project, deps, and bundled devDeps)\" --packageJson --production badges/licenses-badge.svg",
+    "license-badge": "license-badger --corrections --uncategorizedLicenseTemplate \"\\${license} (\\${name} (\\${version}))\" --filteredTypes=nonempty --textTemplate \"License types\n(project, deps, and bundled devDeps)\" --packageJson --production badges/licenses-badge.svg",
     "license-badge-dev": "license-badger --corrections --filteredTypes=nonempty --textTemplate \"License types\n(all devDeps)\" --allDevelopment badges/licenses-badge-dev.svg",
     "license-badges": "npm run license-badge && npm run license-badge-dev",
+    "build-cli": "clp -c bin/optionDefinitions.js cli.svg",
     "coverage-badge": "coveradge badges/coverage-badge",
-    "mocha": "_mocha --recursive --reporter-options configFile=mocha-multi-reporters.json tests",
+    "mocha": "_mocha --require chai/register-expect --recursive --reporter-options configFile=mocha-multi-reporters.json tests",
     "nyc": "nyc --all npm run mocha && npm run coverage-badge",
     "test": "npm run eslint && npm run nyc"
   },
@@ -30,15 +33,21 @@
       "text"
     ]
   },
+  "bin": {
+    "esq": "./bin/index.js"
+  },
   "dependencies": {
+    "command-line-basics": "^0.8.0",
     "es6-template-strings": "^2.0.1",
+    "eslint": "^7.0.0",
     "fast-safe-stringify": "^2.0.7",
     "requireindex": "~1.2.0"
   },
   "devDependencies": {
     "@mysticatea/eslint-plugin": "^13.0.0",
+    "chai": "^4.2.0",
+    "command-line-publish": "^0.7.0",
     "coveradge": "^0.6.0",
-    "eslint": "^7.0.0",
     "cypress-multi-reporters": "^1.4.0",
     "eslint-config-ash-nazg": "^22.1.0",
     "eslint-config-standard": "^14.1.1",

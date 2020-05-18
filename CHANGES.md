@@ -1,5 +1,15 @@
 # eslint-plugin-query CHANGES
 
+## 0.6.0
+
+- Enhancement: Add CLI and programmatic API (distinct from use as
+    ESLint plugin)
+- Enhancement: Add `json-stringify` format option and make it the
+    default (easier with line breaks, yet still readable)
+- Docs: Update license badges
+- npm: Add `--corrections` for license badge generation (deprecated
+    but valid license format was not being processed)
+
 ## 0.5.0
 
 - Enhancement: Add `meta: {type: "suggestion"}`
