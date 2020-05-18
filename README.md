@@ -165,6 +165,8 @@ $(npm bin)/eslint --plugin query --rule 'query/query: [2, {queries: {":not(Funct
     1. CLI could also perform aggregate counts of expressions, e.g.,
         how many `FunctionDeclaration`'s one had in a file or across files
 1. Add an option to match (additionally) by regex.
+1. Add an option to highlight certain esqueries out of the results, e.g.,
+    to show the list of parameter names of all functions
 1. Get an AST parser for jsdoc comment blocks, e.g., to search for `@todo` comments,
     or all functions with a given (jsdoc-described) signature (e.g., all params
     accepting a given type, all typedefs extending a type, all `@public` functions,
