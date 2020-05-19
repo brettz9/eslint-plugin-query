@@ -1,5 +1,10 @@
 # eslint-plugin-query CHANGES
 
+## 0.7.1
+
+- Docs: Elaborate on global installation; fix CLI link; add screenshot
+- Docs: Clarifiy re: "errors" in command
+
 ## 0.7.0
 
 - Enhancement: Add `notGlob` option
