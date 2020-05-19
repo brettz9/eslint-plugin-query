@@ -49,19 +49,21 @@ this rule differs in that:
 
 ## Installation
 
-You'll first need to install [ESLint](http://eslint.org):
+If using as a plugin, you can install locally:
 
-```
-$ npm i eslint --save-dev
-```
-
-Next, install `eslint-plugin-query`:
-
-```
-$ npm install eslint-plugin-query --save-dev
+```sh
+$ npm i eslint-plugin-query --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-query` globally.
+However, if you only wish to use this tool to make one-off searches of code,
+the global installation is recommended as it is more convenient for CLI usage
+and does not require each project to have its own installation.
+
+You can install globally as follows using the `-g` flag:
+
+```sh
+$ npm i -g eslint-plugin-query
+```
 
 ## Usage
 
@@ -129,6 +131,11 @@ module.exports = {
 
 ## CLI
 
+It is simpler to use the CLI to get at results (though you'll want to
+install `eslint-plugin-query` in such a case):
+
+![./docs/sample-query.png](https://raw.githubusercontent.com/brettz9/eslint-plugin-query/master/docs/sample-query.png?sanitize=true)
+
 Note that in the CLI (and also programmatic) usage, we auto-detect your parser
 and parser options. However, since we allow you to supply file globs, and since
 ESLint allows `overrides` such that you may have different parsers set up in
@@ -139,7 +146,7 @@ the default `eslint-plugin-query-dummy.js` file (you don't need to have this
 file in your project, but it allows you to specify an `overrides` `file`
 targeting it and giving a parser or parser options for it).
 
-![cli.svg](https://raw.githubusercontent.com/brettz9/license-badger/master/cli.svg?sanitize=true)
+![cli.svg](https://raw.githubusercontent.com/brettz9/eslint-plugin-query/master/cli.svg?sanitize=true)
 
 ## Tips
 
