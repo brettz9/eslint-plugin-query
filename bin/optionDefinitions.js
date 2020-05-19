@@ -84,6 +84,14 @@ const optionDefinitions = [
     typeLabel: '{underline "json-stringify"|"string"|"node"}'
   },
   {
+    name: 'notGlob', type: Boolean,
+    description: 'Indicates the file(s) given are not globs. If set, this ' +
+      'option will also treat the first `file` as the determinant for ' +
+      'detecting `parser` and `parserOptions` (rather than the dummy ' +
+      'file (that can be used for `overrides` matching) of ' +
+      '`eslint-plugin-query-dummy.js`).'
+  },
+  {
     name: 'formatter', type: String,
     description: 'The ESLint formatter to use; see ' +
       'https://eslint.org/docs/user-guide/formatters/ ; ' +
@@ -100,7 +108,7 @@ const cliSections = [
     content: pkg.description +
       '\n\n{italic esq -q="FunctionDeclaration > FunctionExpression" ' +
         '[--defaultFormat="node"] [--start=<int>] [--end=<int>]} ' +
-        '[<files to lint>]'
+        '[-i <files to lint>]'
   },
   {
     optionList: optionDefinitions,

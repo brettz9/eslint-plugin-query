@@ -17,7 +17,7 @@ if (!optionDefinitions) { // cliBasics handled
 
 (async () => {
 const {
-  file,
+  file, notGlob,
   count, fileCount, defaultFormat,
   query
 } = optionDefinitions;
@@ -40,7 +40,7 @@ Object.values(query).forEach((q, i) => {
 if (fileCount !== undefined) {
   // eslint-disable-next-line no-console
   console.log(await eslintFileCount({
-    file, defaultFormat, queries
+    file, notGlob, defaultFormat, queries
   }));
   return;
 }
@@ -48,13 +48,13 @@ if (fileCount !== undefined) {
 if (count !== undefined) {
   // eslint-disable-next-line no-console
   console.log(await eslintCount({
-    file, defaultFormat, queries
+    file, notGlob, defaultFormat, queries
   }));
   return;
 }
 
 // eslint-disable-next-line no-console
 console.log(await eslintFormat({
-  file, defaultFormat, queries
+  file, notGlob, defaultFormat, queries
 }));
 })();

@@ -30,7 +30,19 @@ describe('Binary', function () {
 
   it('should run queries with specific file', async function () {
     const {stdout} = await execFile(binFile, [
-      '-q', 'VariableDeclaration', 'tests/lib/fixtures/sample.js'
+      '-q', 'VariableDeclaration',
+      '-i', 'tests/lib/fixtures/sample.js'
+    ]);
+    expect(stdout).to.contain(
+      'error  "const val1 = 5;'
+    );
+  });
+
+  it('should run queries with specific file with `notGlob`', async function () {
+    const {stdout} = await execFile(binFile, [
+      '-q', 'VariableDeclaration',
+      '-i', 'tests/lib/fixtures/sample.js',
+      '--notGlob'
     ]);
     expect(stdout).to.contain(
       'error  "const val1 = 5;'
@@ -56,7 +68,7 @@ describe('Binary', function () {
       '--parent',
       '--end', '1000',
       '--format', 'node',
-      'tests/lib/fixtures/sample.js'
+      '-i', 'tests/lib/fixtures/sample.js'
     ]);
     expect(stdout).to.contain(
       '"type": "VariableDeclaration",'

@@ -1,5 +1,9 @@
 # eslint-plugin-query CHANGES
 
+## 0.7.0
+
+- Enhancement: Add `notGlob` option
+
 ## 0.6.0
 
 - Enhancement: Add CLI and programmatic API (distinct from use as

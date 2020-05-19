@@ -129,6 +129,16 @@ module.exports = {
 
 ## CLI
 
+Note that in the CLI (and also programmatic) usage, we auto-detect your parser
+and parser options. However, since we allow you to supply file globs, and since
+ESLint allows `overrides` such that you may have different parsers set up in
+your config, we don't know by default which file to check for the parser
+config. To ensure the proper parser is used, you can either use the
+`notGlob` setting (and use a regular file) or rely on setting an override for
+the default `eslint-plugin-query-dummy.js` file (you don't need to have this
+file in your project, but it allows you to specify an `overrides` `file`
+targeting it and giving a parser or parser options for it).
+
 ![cli.svg](https://raw.githubusercontent.com/brettz9/license-badger/master/cli.svg?sanitize=true)
 
 ## Tips
