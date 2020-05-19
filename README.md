@@ -140,11 +140,11 @@ Note that the CLI uses the ESLint formatter, in this case showing them as
 errors, but as this does no fixing, you can use the `esq` CLI command simply
 to see the code (as in the above screenshot).
 
-Note that in the CLI (and also programmatic) usage, we auto-detect your parser
-and parser options. However, since we allow you to supply file globs, and since
-ESLint allows `overrides` such that you may have different parsers set up in
-your config, we don't know by default which file to check for the parser
-config. To ensure the proper parser is used, you can either use the
+Note also that in the CLI (and also programmatic) usage, we auto-detect your
+parser and parser options. However, since we allow you to supply file globs,
+and since ESLint allows `overrides` such that you may have different parsers
+set up in your config, we don't know by default which file to check for the
+parser config. To ensure the proper parser is used, you can either use the
 `notGlob` setting (and use a regular file) or rely on setting an override for
 the default `eslint-plugin-query-dummy.js` file (you don't need to have this
 file in your project, but it allows you to specify an `overrides` `file`
