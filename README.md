@@ -136,6 +136,10 @@ install `eslint-plugin-query` in such a case):
 
 ![./docs/sample-query.png](https://raw.githubusercontent.com/brettz9/eslint-plugin-query/master/docs/sample-query.png?sanitize=true)
 
+Note that the CLI uses the ESLint formatter, in this case showing them as
+errors, but as this does no fixing, you can use the `esq` CLI command simply
+to see the code (as in the above screenshot).
+
 Note that in the CLI (and also programmatic) usage, we auto-detect your parser
 and parser options. However, since we allow you to supply file globs, and since
 ESLint allows `overrides` such that you may have different parsers set up in
