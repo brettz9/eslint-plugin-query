@@ -1,5 +1,11 @@
 # eslint-plugin-query CHANGES
 
+## ?
+
+- Linting: As per latest ash-nazg
+- npm: Update dep. and devDeps
+- npm: Switch to stable `mocha-multi-reporters`
+
 ## 0.7.1
 
 - Docs: Elaborate on global installation; fix CLI link; add screenshot

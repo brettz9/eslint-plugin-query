@@ -38,7 +38,7 @@ Object.values(query).forEach((q, i) => {
 });
 
 if (fileCount !== undefined) {
-  // eslint-disable-next-line no-console
+  // eslint-disable-next-line no-console -- Binary
   console.log(await eslintFileCount({
     file, notGlob, defaultFormat, queries
   }));
@@ -46,14 +46,14 @@ if (fileCount !== undefined) {
 }
 
 if (count !== undefined) {
-  // eslint-disable-next-line no-console
+  // eslint-disable-next-line no-console -- Binary
   console.log(await eslintCount({
     file, notGlob, defaultFormat, queries
   }));
   return;
 }
 
-// eslint-disable-next-line no-console
+// eslint-disable-next-line no-console -- Binary
 console.log(await eslintFormat({
   file, notGlob, defaultFormat, queries
 }));
