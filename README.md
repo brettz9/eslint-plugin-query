@@ -97,7 +97,18 @@ module.exports = {
           end: 100
         }
       }
-    }]
+    }],
+    'query/no-missing-syntax': [
+      'error',
+      {
+        queries: {
+          'FunctionDeclaration[params.length<2]': {
+            message: 'Must have at least two short function signatures!',
+            minimum: 2
+          }
+        }
+      }
+    ]
   }
 };
 ```
@@ -128,6 +139,17 @@ module.exports = {
     - an optional `defaultFormat` string (`"string"` (the default) or `"node"`).
         If `node` is chosen will be represented as stringified Node AST
         rather than the string found in source.
+- `query/no-missing-syntax` - Requires a single options object, with:
+    - a `queries` object:
+        - Its key should be a string representing the
+            [selector](https://eslint.org/docs/developer-guide/selectors).
+        - Its value should be an object with the following optional properties:
+            - `minimum` - Minimum requires instances. Defaults to 1.
+            - `template` - A string in the form of an ES6 template (see
+                [es6-template-strings](https://github.com/medikoo/es6-template-strings/)).
+                It will be passed the following:
+                    - `selector` - The AST selector.
+                Defaults to `Syntax is required: ${selector}`.
 
 ## CLI
 

@@ -9,7 +9,7 @@ module.exports = {
       'Object.entries'
     ]
   },
-  extends: ['ash-nazg/sauron-node', 'plugin:node/recommended-script'],
+  extends: ['ash-nazg/sauron-node-script-overrides'],
   parserOptions: {
     sourceType: 'script'
   },

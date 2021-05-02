@@ -1,9 +1,18 @@
 # eslint-plugin-query CHANGES
 
-## ?
+## 0.8.0
+
+### User-impacing
+
+- Enhancement: Add `no-missing-syntax` rule
+- npm: Update dep. eslint (minor)
+
+### Dev-impacting
 
 - Linting: As per latest ash-nazg
-- npm: Update dep. and devDeps
+- Refactoring: Simplify query
+- npm: Switch to pnpm
+- npm: Update devDeps. (including changing peerDeps. per latest ash-nazg)
 - npm: Switch to stable `mocha-multi-reporters`
 
 ## 0.7.1
