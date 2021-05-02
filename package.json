@@ -17,6 +17,7 @@
     "cli": "./bin/index.js",
     "eslint": "eslint --ext=js,md,html .",
     "local-test": "eslint --rulesdir lib/rules --rule 'query: [2, {queries: {\"VariableDeclaration\": {end:100}}}]' .",
+    "local-missing-test": "eslint --rulesdir lib/rules --rule '\"no-missing-syntax\": [2, {queries: {\"FunctionDeclaration[params.length>3]\": {}}}]' .",
     "prepublishOnly": "echo \"Ignore this for now... npm run license-badges\"",
     "license-badge": "license-badger --corrections --uncategorizedLicenseTemplate \"\\${license} (\\${name} (\\${version}))\" --filteredTypes=nonempty --textTemplate \"License types\n(project, deps, and bundled devDeps)\" --packageJson --production badges/licenses-badge.svg",
     "license-badge-dev": "license-badger --corrections --filteredTypes=nonempty --textTemplate \"License types\n(all devDeps)\" --allDevelopment badges/licenses-badge-dev.svg",
