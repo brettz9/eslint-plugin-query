@@ -44,7 +44,8 @@ this rule differs in that:
     restrict them (though when used in linting, it indeed serves the purpose of
     restriction).
 3. You can use arbitrary JavaScript in your template syntax
-4. I hope to expand to other rules for querying (and possibly formatting/sorting
+4. We can support other rules for querying, e.g., as already added with
+    `query/no-missing-syntax` (and possibly other means of formatting/sorting
     results).
 
 ## Installation
