@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-query",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Add \"rules\" made of arbitrary selectors to choose source lines to be reported",
   "keywords": [
     "eslint",
@@ -72,7 +72,7 @@
     "nyc": "^15.1.0"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=16.0.0"
   },
   "license": "MIT"
 }
