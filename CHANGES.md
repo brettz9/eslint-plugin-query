@@ -2,7 +2,15 @@
 
 ## 0.9.0
 
+### User-impacing
+
 - feat: update for ESLint 9
+- docs: update license badges
+- chore: update `fast-safe-stringify`
+
+### Dev-impacting
+
+- chore: update devDeps
 
 ## 0.8.0
 
