@@ -24,7 +24,7 @@
     "license-badges": "npm run license-badge && npm run license-badge-dev",
     "build-cli": "clp -c bin/optionDefinitions.js cli.svg",
     "coverage-badge": "coveradge badges/coverage-badge",
-    "mocha": "mocha --require chai/register-expect --recursive --reporter-options configFile=mocha-multi-reporters.json tests",
+    "mocha": "mocha --require chai/register-expect.js --recursive --reporter-options configFile=mocha-multi-reporters.json tests",
     "nyc": "nyc --all npm run mocha && npm run coverage-badge",
     "test": "npm run eslint && npm run nyc"
   },
@@ -41,14 +41,14 @@
     "command-line-basics": "^0.8.0",
     "es6-template-strings": "^2.0.1",
     "eslint": "^7.25.0",
-    "fast-safe-stringify": "^2.0.7",
+    "fast-safe-stringify": "^2.1.1",
     "requireindex": "~1.2.0"
   },
   "devDependencies": {
-    "@brettz9/eslint-plugin": "^1.0.3",
-    "chai": "^4.3.4",
-    "command-line-publish": "^0.7.0",
-    "coveradge": "^0.6.0",
+    "@brettz9/eslint-plugin": "^1.0.4",
+    "chai": "^5.1.1",
+    "command-line-publish": "^1.1.0",
+    "coveradge": "^0.8.2",
     "eslint-config-ash-nazg": "^29.13.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-array-func": "^3.1.7",
@@ -56,7 +56,7 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^6.1.2",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^33.0.0",
+    "eslint-plugin-jsdoc": "^35.4.1",
     "eslint-plugin-markdown": "^2.1.0",
     "eslint-plugin-no-unsanitized": "^3.1.5",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
@@ -64,12 +64,12 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-radar": "^0.2.1",
     "eslint-plugin-standard": "^4.1.0",
-    "eslint-plugin-unicorn": "^31.0.0",
-    "license-badger": "^0.18.0",
-    "mocha": "^8.3.2",
-    "mocha-badge-generator": "^0.9.0",
+    "eslint-plugin-unicorn": "^34.0.0",
+    "license-badger": "^0.21.1",
+    "mocha": "^10.6.0",
+    "mocha-badge-generator": "^0.11.0",
     "mocha-multi-reporters": "^1.5.1",
-    "nyc": "^15.1.0"
+    "nyc": "^17.0.0"
   },
   "engines": {
     "node": ">=16.0.0"

@@ -10,7 +10,7 @@
 //
 
 const {RuleTester} = require('eslint');
-const rules = require('../../../lib/');
+const rules = require('../../../lib/index.js');
 
 const rule = rules.rules['no-missing-syntax'];
 
