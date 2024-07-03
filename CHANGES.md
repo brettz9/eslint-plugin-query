@@ -1,5 +1,9 @@
 # eslint-plugin-query CHANGES
 
+## 0.9.1
+
+- fix: ESLint 9 fixes
+
 ## 0.9.0
 
 ### User-impacing
