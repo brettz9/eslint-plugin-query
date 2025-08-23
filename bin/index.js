@@ -8,7 +8,10 @@ const {
 } = require('../lib/programmatic.js');
 
 const optionDefinitions = cliBasics(
-  join(__dirname, './optionDefinitions.js')
+  join(__dirname, './optionDefinitions.js'),
+  {
+    packageJsonPath: join(__dirname, '/../package.json')
+  }
 );
 
 if (!optionDefinitions) { // cliBasics handled

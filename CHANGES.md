@@ -1,5 +1,9 @@
 # eslint-plugin-query CHANGES
 
+## ? (unreleased)
+
+- fix: supply `command-line-basics` notifier info
+
 ## 0.9.1
 
 - fix: ESLint 9 fixes
