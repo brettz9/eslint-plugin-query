@@ -6,8 +6,6 @@
 [![Coverage badge](https://raw.githubusercontent.com/brettz9/eslint-plugin-query/master/badges/coverage-badge.svg?sanitize=true)](badges/coverage-badge.svg)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/brettz9/eslint-plugin-query/badge.svg)](https://snyk.io/test/github/brettz9/eslint-plugin-query)
-[![Total Alerts](https://img.shields.io/lgtm/alerts/g/brettz9/eslint-plugin-query.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/brettz9/eslint-plugin-query/alerts)
-[![Code Quality: Javascript](https://img.shields.io/lgtm/grade/javascript/g/brettz9/eslint-plugin-query.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/brettz9/eslint-plugin-query/context:javascript)
 
 [![Licenses badge](https://raw.githubusercontent.com/brettz9/eslint-plugin-query/master/badges/licenses-badge.svg?sanitize=true)](badges/licenses-badge.svg)
 
@@ -20,33 +18,6 @@
 # eslint-plugin-query
 
 Add "rules" made of arbitrary [selectors](https://eslint.org/docs/developer-guide/selectors) to choose source lines to be reported.
-
-## Comparison to `esquery` tool
-
-[esquery](https://github.com/estools/esquery) ([demo](https://estools.github.io/esquery/)),
-a tool used within ESLint, allows queries by AST selector. Here is why we
-make a separate tool:
-
-1. Be able to use from the command line
-1. Ability to see the output stringified
-1. Apply to linting if desired as well as querying
-
-## Comparison to ESLint `no-restricted-syntax` rule
-
-While ESLint has a [similar rule](https://eslint.org/docs/rules/no-restricted-syntax),
-this rule differs in that:
-
-1. You can see the actual syntax in the output if you wish (optionally slicing
-    this output with start and/or end); this makes it ideal for querying data
-    rather than just knowing that some syntax is present in such-and-such a
-    file at such-and-such a line number.
-2. This plugin name suggests it can be used to *find* items rather than just
-    restrict them (though when used in linting, it indeed serves the purpose of
-    restriction).
-3. You can use arbitrary JavaScript in your template syntax
-4. We can support other rules for querying, e.g., as already added with
-    `query/no-missing-syntax` (and possibly other means of formatting/sorting
-    results).
 
 ## Installation
 
@@ -68,23 +39,24 @@ $ npm i -g eslint-plugin-query
 
 ## Usage
 
-Add `query` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `query` to the plugins section of your `eslint.config.js` configuration file:
 
-```json
-{
-    "plugins": [
-        "query"
-    ]
-}
+```js
+import query from 'eslint-plugin-query';
+
+export default {
+  plugins: {
+    query
+  }
+};
 ```
 
 
 Then configure the rules you want to use under the rules section.
 
 ```js
-'use strict';
-
-module.exports = {
+export default {
+  // ...
   rules: {
     'query/query': [2, {
       queries: {
@@ -116,41 +88,8 @@ module.exports = {
 
 ## Supported Rules
 
-- `query/query` - Requires a single options object, with:
-    - a `queries` object:
-        - Its key should be a string representing the
-            [selector](https://eslint.org/docs/developer-guide/selectors).
-        - Its value should be an object with the following optional properties:
-            - `template` - A string in the form of an ES6 template (see
-                [es6-template-strings](https://github.com/medikoo/es6-template-strings/)).
-                If not present, the `result` will be used instead. If present,
-                it will be passed the following:
-                    - `result` - The selector-identified node represented as
-                        a string (i.e., the lines of code pointed to by
-                        the selector)
-            - `start` - An integer at which to begin slicing out of
-                the selected lines of code. May be negative as with
-                `slice`.
-            - `end` - An integer at which to end slicing out of the
-                selected lines of code. May be negative as with `slice`.
-            - `format` - May override any `defaultFormat` (see below).
-            - `parent` - If `format` is "node", setting this to `true`
-                will also show the `parent` properties on the AST. Defaults
-                to `false`.
-    - an optional `defaultFormat` string (`"string"` (the default) or `"node"`).
-        If `node` is chosen will be represented as stringified Node AST
-        rather than the string found in source.
-- `query/no-missing-syntax` - Requires a single options object, with:
-    - a `queries` object:
-        - Its key should be a string representing the
-            [selector](https://eslint.org/docs/developer-guide/selectors).
-        - Its value should be an object with the following optional properties:
-            - `minimum` - Minimum requires instances. Defaults to 1.
-            - `template` - A string in the form of an ES6 template (see
-                [es6-template-strings](https://github.com/medikoo/es6-template-strings/)).
-                It will be passed the following:
-                    - `selector` - The AST selector.
-                Defaults to `Syntax is required: ${selector}`.
+* [query/no-missing-syntax](./docs/rules/no-missing-syntax.md)
+* [query/query](./docs/rules/query.md)
 
 ## CLI
 

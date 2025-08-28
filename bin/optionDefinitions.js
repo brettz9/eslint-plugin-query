@@ -1,16 +1,16 @@
 'use strict';
 
-const pkg = require('../package.json');
+import pkg from '../package.json' with {type: 'json'};
 
 // Todo: We really need a comamnd-line-args-TO-typedef-jsdoc generator!
 /* eslint-disable jsdoc/require-property -- Use jsdoc-jsonschema? */
 /**
-* @typedef {PlainObject} ESLintPluginQueryCLIOptions
+* @typedef {object} ESLintPluginQueryCLIOptions
 */
 /* eslint-enable jsdoc/require-property -- Use jsdoc-jsonschema? */
 
-const getChalkTemplateSingleEscape = (s) => {
-  return s.replace(/[{}\\]/gu, (ch) => {
+export const getChalkTemplateSingleEscape = (s) => {
+  return s.replaceAll(/[\{\}\\]/gv, (ch) => {
     return `\\u${ch.codePointAt().toString(16).padStart(4, '0')}`;
   });
 };
@@ -42,13 +42,13 @@ const optionDefinitions = [
     typeLabel: '{underline template}'
   },
   {
-    name: 'start', type: parseInt, multiple: true, alias: 's',
+    name: 'start', type: Number.parseInt, multiple: true, alias: 's',
     description: 'Integer at which to begin slicing out of the selected ' +
       'lines of code for this query. May be negative as with `slice`',
     typeLabel: '{underline integer}'
   },
   {
-    name: 'end', type: parseInt, multiple: true, alias: 'e',
+    name: 'end', type: Number.parseInt, multiple: true, alias: 'e',
     description: 'Integer at which to end slicing out of the selected ' +
       'lines of code for this query. May be negative as with `slice`',
     typeLabel: '{underline integer}'
@@ -118,6 +118,5 @@ const cliSections = [
   }
 ];
 
-exports.getChalkTemplateSingleEscape = getChalkTemplateSingleEscape;
-exports.definitions = optionDefinitions;
-exports.sections = cliSections;
+export const definitions = optionDefinitions;
+export const sections = cliSections;

@@ -1,6 +1,7 @@
-tests
+test
 coverage
 .nyc_output
 mocha-multi-reporters.json
 .mocharc.js
 pnpm-lock.yaml
+eslint.config.js

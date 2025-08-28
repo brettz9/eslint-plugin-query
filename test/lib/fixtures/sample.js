@@ -1,5 +1,4 @@
-'use strict';
-
+/* eslint-disable import/unambiguous -- No need */
 const val1 = 5;
 
 const val2 = 7;

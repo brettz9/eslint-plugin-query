@@ -1,6 +1,4 @@
-'use strict';
-
-exports.functionAST = `{
+export const functionAST = `{
   "type": "FunctionDeclaration",
   "loc": {
     "start": {
@@ -285,7 +283,7 @@ exports.functionAST = `{
   }
 }`;
 
-exports.functionASTNoParent = `{
+export const functionASTNoParent = `{
   "type": "FunctionDeclaration",
   "loc": {
     "start": {

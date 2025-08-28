@@ -1,8 +1,15 @@
 # eslint-plugin-query CHANGES
 
-## ? (unreleased)
+## 0.10.0
+
+BREAKING CHANGES:
+- Requires ESM
+- Requires Node ^20.11.0 || >= 22.0.0
 
 - fix: supply `command-line-basics` notifier info
+- feat: switch to native ESM
+- chore: update deps. and devDeps.
+- docs: expand rule documentation
 
 ## 0.9.1
 

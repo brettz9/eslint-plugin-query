@@ -1,12 +1,11 @@
-'use strict';
-
-const {promisify} = require('util');
-const {join} = require('path');
-const {execFile: ef} = require('child_process');
+import {promisify} from 'util';
+import {join} from 'path';
+import {execFile as ef} from 'child_process';
+import {expect} from 'chai';
 
 const execFile = promisify(ef);
 
-const binFile = join(__dirname, '../bin/index.js');
+const binFile = join(import.meta.dirname, '../bin/index.js');
 
 describe('Binary', function () {
   this.timeout(20000);
@@ -24,35 +23,35 @@ describe('Binary', function () {
       '-q', 'VariableDeclaration'
     ]);
     expect(stdout).to.contain(
-      'error  "const {join}'
+      'error    "const val1'
     );
   });
 
   it('should run queries with specific file', async function () {
     const {stdout} = await execFile(binFile, [
       '-q', 'VariableDeclaration',
-      '-i', 'tests/lib/fixtures/sample.js'
+      '-i', 'test/lib/fixtures/sample.js'
     ]);
     expect(stdout).to.contain(
-      'error  "const val1 = 5;'
+      'error    "const val1 = 5;'
     );
   });
 
   it('should run queries with specific file with `notGlob`', async function () {
     const {stdout} = await execFile(binFile, [
       '-q', 'VariableDeclaration',
-      '-i', 'tests/lib/fixtures/sample.js',
+      '-i', 'test/lib/fixtures/sample.js',
       '--notGlob'
     ]);
     expect(stdout).to.contain(
-      'error  "const val1 = 5;'
+      'error    "const val1 = 5;'
     );
   });
 
   it('should handle multiple child arguments', async function () {
     const {stdout} = await execFile(binFile, [
       '-q', 'VariableDeclaration',
-      '-i', 'tests/lib/fixtures/sample.js',
+      '-i', 'test/lib/fixtures/sample.js',
       '--template', 'Oops: ${result}',
       '--start', '1',
       '--end', '-1'
@@ -68,7 +67,7 @@ describe('Binary', function () {
       '--parent',
       '--end', '1000',
       '--format', 'node',
-      '-i', 'tests/lib/fixtures/sample.js'
+      '-i', 'test/lib/fixtures/sample.js'
     ]);
     expect(stdout).to.contain(
       '"type": "VariableDeclaration",'
@@ -86,7 +85,7 @@ describe('Binary', function () {
         '.'
       ]);
       expect(stdout).to.match(
-        /^\d+\n$/u
+        /^\d+\n$/v
       );
     });
   });
@@ -99,7 +98,7 @@ describe('Binary', function () {
         '.'
       ]);
       expect(stdout).to.match(
-        /^\d+\n$/u
+        /^\d+\n$/v
       );
     });
   });

@@ -1,16 +1,14 @@
 #!/usr/bin/env node
-'use strict';
 
-const {join} = require('path');
-const {cliBasics} = require('command-line-basics');
-const {
-  format: eslintFormat, count: eslintCount, fileCount: eslintFileCount
-} = require('../lib/programmatic.js');
+import {cliBasics} from 'command-line-basics';
+import {
+  format as eslintFormat, count as eslintCount, fileCount as eslintFileCount
+} from '../lib/programmatic.js';
 
-const optionDefinitions = cliBasics(
-  join(__dirname, './optionDefinitions.js'),
+const optionDefinitions = await cliBasics(
+  import.meta.dirname + '/optionDefinitions.js',
   {
-    packageJsonPath: join(__dirname, '/../package.json')
+    packageJsonPath: import.meta.dirname + '/../package.json'
   }
 );
 
@@ -18,6 +16,7 @@ if (!optionDefinitions) { // cliBasics handled
   process.exit();
 }
 
+// eslint-disable-next-line unicorn/prefer-top-level-await -- Has returns
 (async () => {
 const {
   file, notGlob,

@@ -1,18 +1,17 @@
 /**
  * @file Use arbitrary selectors to require that specific
- *        structures are present
+ *        structures are present.
  * @author Brett Zamir
  */
-'use strict';
 
 //
 // Requirements
 //
 
-const {RuleTester} = require('eslint');
-const rules = require('../../../lib/index.js');
+import {RuleTester} from 'eslint';
+import {rules} from '../../../lib/index.js';
 
-const rule = rules.rules['no-missing-syntax'];
+const rule = rules['no-missing-syntax'];
 
 //
 // Tests

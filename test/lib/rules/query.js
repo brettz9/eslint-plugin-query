@@ -1,18 +1,17 @@
 /**
- * @file Use arbitrary selectors to search for lines of code
+ * @file Use arbitrary selectors to search for lines of code.
  * @author Brett Zamir
  */
-'use strict';
 
 //
 // Requirements
 //
 
-const {RuleTester} = require('eslint');
-const rules = require('../../../lib/index.js');
-const {functionAST, functionASTNoParent} = require('../fixtures/ast.js');
+import {RuleTester} from 'eslint';
+import {rules} from '../../../lib/index.js';
+import {functionAST, functionASTNoParent} from '../fixtures/ast.js';
 
-const rule = rules.rules.query;
+const rule = rules.query;
 
 //
 // Tests
